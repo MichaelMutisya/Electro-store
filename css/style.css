@@ -1,0 +1,750 @@
+/*  Theme: Electro Store;
+    Version: 1.0;
+    Author: Michael Mutisya;
+*/
+
+/*CSS for all starts here*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*logo CSS*/
+.logo {
+    font-size: large;
+    font-weight: bold;
+    width: 30vw;
+}
+.logo span {
+    color: #4949e0;
+}
+.logo h4{
+    color: orange;
+}
+.wrapper {
+    margin: auto;
+    width: 90%;
+}
+.container-wrapper {
+    margin: auto;
+    width: 90%;
+}
+.text-center {
+    text-align: center;
+}
+.img-responsive {
+    width: 100%;
+}
+.btn {
+    padding: 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.danger {
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #f84848;
+    border-radius: 5px;
+}
+.danger:hover {
+    background-color: #f30a0a;
+}
+.primary {
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: orange;
+    border-radius: 5px;
+}
+.primary:hover {
+    background-color: #4949e0;
+}
+.secondary {
+    padding: 4.5px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #4949e0;
+}
+.secondary:hover {
+    background-color: #0b0be4;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.title h3{
+    width: 5%;
+    border-bottom: 5px solid #4949e0;
+    margin: 15px 0 30px;
+}
+.img-hover {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.img-hover:hover {
+    opacity: 0.1;
+}
+a {
+    text-decoration: none;
+}
+.active {
+    display: none;
+}
+.cart-label {
+    width: 23px;
+    height: 20px;
+    padding: 2px;
+    background-color: orange;
+    color: white;
+    position: absolute;
+    top: -11px;
+    left: 12px;
+    border-radius: 50%;
+}
+.shopping-cart {
+    position: sticky;
+    top: 20%;
+}
+.tbl-100 {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.tbl-100 tr td{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.tbl-100 th {
+    border-bottom: 2px solid grey;
+    
+}
+.status-pending {
+    color: purple;
+    background-color: #9e609e;
+    border: 1px solid purple;
+    border-radius: 40px;
+}
+.status-cancelled {
+    color: red;
+    background-color: #e9a3a3;
+    border: 1px solid red;
+    border-radius: 40px;
+}
+.status-onway {
+    color: #0b0be4;
+    background-color: #8080f0;
+    border: 1px solid #0b0be4;
+    border-radius: 40px;
+}
+.status-delivered {
+    color: green;
+    background-color: #88e688;
+    border: 1px solid green;
+    border-radius: 40px;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+/*CSS for all ends here*/
+
+/*CSS for menu-section starts here*/
+/*menu-section CSS*/
+.menu-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/*account-login CSS*/
+.account-login {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1%;
+}
+.account-login a {
+    padding: 3px;
+    color: #4949e0;
+}
+.account-login a:hover {
+    color: orange;
+}
+.account {
+    float: right;
+    margin-bottom: 12px;
+}
+/*menu-container*/
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+/*search-form CSS*/
+.search-input {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 80%;
+}
+.form-controller {
+    position: relative;
+    width: 80%;
+}
+.input-text {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 10px;
+    background-color: #d8d3d3;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition: outline 1s ease-in-out;
+}
+.input-text:focus {
+    outline: 2px solid #4949e0;
+}
+/*font awesome position icon*/
+.fa-search, .solid {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+}
+.search-btn {
+    background-color: orange;
+    color: #4949e0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: transform 1s ease-in-out;
+}
+.search-btn:hover {
+    transform: rotateX(360deg);
+}
+/*menu CSS*/
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+.menu-container ul li {
+    position: relative;
+    list-style: none;
+    margin-left: 2%;
+}
+.menu-container ul li a {
+    display: flex;
+    justify-content: space-around; 
+    background-color: #4949e0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+.menu-container ul li a:hover {
+    transform: translateX(5px);
+    background-color: white;
+    color: #4949e0;
+}
+.menu-container ul li a:last-child:hover {
+    transform: translateY(-5px);
+}
+.menu .fa-shopping-cart, .fa-store {
+    color: orange;
+    font-size: 20px;
+}
+/*CSS for menu-section ends here*/
+
+/*CSS for main-section starts here*/
+/*main CSS*/
+/*CATEGORIES*/
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+/*row CSS*/
+.main-section .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.row a {
+    color: black;
+}
+/*card CSS*/
+.row .card {
+    position: relative;
+    width: 25vw;
+    height: 90%;
+    margin: 5px 5px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+.row .card:hover {
+    transform: scale(0.9);
+    color: orange;
+}
+.row .card h3{
+    position: absolute;
+    top: 60%;
+    left: 25%;
+}
+.row .card img {
+    height: 100%;
+}
+/*FEATURED*/
+.product-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-card {
+    position: relative;
+    padding: 12px;
+    width: 15vw;
+    height: 50vh;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+.product-card a {
+    color: black;
+}
+.product-card a:hover {
+    color: orange;
+}
+.product-card:hover {
+    transform: scale(0.95);
+}
+.product-card button {
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card button:hover {
+    background-color: #4949e0;
+}
+.rating {
+    color: orange;
+}
+/*special offer*/
+.special-offer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.special-offer-card {
+    display: flex;
+    padding: 30px;
+    width: 80%;
+    height: 60%;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.special-offer-gif {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 12px;
+}
+.special-offer-description {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 30px;
+    padding: 20px;
+    justify-content: flex-end;
+}
+.special-offer-description h4 {
+    margin: 5px;
+    float: right;
+}
+.special-offer-description .top {
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 50%;
+    padding: 30px;
+    width: 50%;
+    height: 80%;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.special-offer-description .rating {
+    font-size: 14px;
+}
+.special-offer-description .top img {
+    float: right;
+}
+/*CSS for main-section ends here*/
+
+/*CSS for footer-section starts here*/
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #131212;
+    padding-top: 30px;
+    color: white;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+}
+.footer-columns {
+    width: 33.33%;
+} 
+.app-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+.platform  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.platform a {
+    color: white;
+}
+.platform a:hover {
+    color: orange;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+}
+.subscription-description {
+    margin-top: 12px;
+}
+.subscription-form {
+    padding: 12px;
+    margin-top: 12px;
+}
+.subscription-form input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: outline 1s ease-in-out;
+    margin-bottom: 5px;
+}
+.subscription-form input:focus {
+    outline: 3px solid #4949e0;
+}
+.subscription-form button {
+    padding: 10px;
+    color: #4949e0;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 5px;
+    transform: translateX(135px);
+    margin-top: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+.subscription-form button:hover {
+    background-color: #d88f07;
+    color: white;
+}
+.social-media-platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media-platform {
+   display: flex;
+   justify-content: flex-start;
+}
+.media-platform a {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.media-platform a:hover {
+    color: orange;
+}
+.help-container {
+    display: flex;
+}
+.controller {
+    width: 40vw;
+}
+.controller .top i {
+    font-size: 50px;
+    transition: transform 0.5s ease-in-out;
+}
+.controller .top i:hover {
+    transform: translateY(-10px);
+}
+.controller .top a {
+    color: #4949e0;
+}
+.controller .chatbot i {
+    position: fixed;
+    bottom: 7%;
+    right: 3%;
+    font-size: 50px;
+    color: #4949e0;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.controller .chatbot i:hover {
+    transform: scale(1.1);
+}
+/*CSS for footer-section ends here*/
+
+/*CSS for cart page starts here*/
+/*product*/
+.cart {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.cart .cart-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cart .product {
+    display: flex;
+    padding: 12px;
+    width: 70%;
+    align-items: center;
+}
+.cart .product .cart-product-card {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    padding: 12px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 12px;
+}
+.cart .product .cart-product-card .product-img {
+    width: 30%;
+    margin-right: 50px;
+}
+/*quantity*/
+.cart .product .quantity {
+    width: 40%;
+}
+.cart .product .quantity .quantity-input .qnum{
+    width: 40px;
+    margin-left: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+/*checkout*/
+.cart .checkout {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 28%;
+    right: 5%;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.cart .checkout .checkout-prices {
+    padding: 20px;
+}
+.cart .checkout .checkout-prices h3, h4, h5 {
+    margin-bottom: 12px;
+}
+.cart .checkout .checkout-prices button {
+    width: 100%;
+    margin-top: 12px;
+}
+/*CSS for cart page ends here*/
+/*CSS for checkout page starts here*/
+.checkout {
+    display: flex;
+    justify-content: space-between;
+}
+.payout-form {
+    margin-bottom: 5px;
+    width: 90%;
+}
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.method {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 12px;
+    padding: 12px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 12px;
+}
+.method:hover {
+    box-shadow: 0 0 40px 0 rgb(158, 135, 135);
+}
+.payment-brands {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 12px;
+}
+.brand {
+    width: 60%;
+    height: 30%;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.brand:hover {
+    transform: scale(1.2);
+}
+/*CSS for checkout page ends here*/
+/*CSS for end-shopping page starts here*/
+.thankyounote {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.thankyounote .note {
+    width: 70%;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.thankyounote .note:hover {
+    transform: scale(1.2);
+}
+.thankyounote .note p {
+    font-weight: bold;
+}
+/*CSS for end-shopping page ends here*/
+/*CSS for login page starts here*/
+.login-register {
+    background-color: #d8d3d3;
+}
+.login, .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d8d3d3;
+}
+.login-form, .register-form{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.login-form form, .register-form form {
+    width: 80%;
+    padding: 30px 0;
+}
+.login-form .form-controller,.register-form .form-controller{
+    width: 100%;
+    margin-left: -12px;
+}
+.login-form a, .register-form a{
+    color: #4949e0;
+}
+.login-form a:hover, .register-form a:hover{
+    color: orange;
+}
+.login-form i,.register-form i{
+    top: 25px;
+    left: 23px;
+}
+.login-form input, .register-form input{
+    margin: 12px;
+}
+.login-form button, .register-form button {
+    margin-top: 12px;
+    width: 100%;
+}
+/*CSS for login page ends here*/
+/*CSS for account page starts here*/
+.customer-information {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+.customer-information .information {
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.orders-status {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+
+}
+.orders-status .orders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+.orders-status .orders .order3 {
+    margin: 12px;
+    padding: 12px;
+    width: 150px;
+    color: white;
+    background-color: #4949e0;
+    border-radius: 5px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    transition: all 0.9s ease-in-out;
+}
+.orders-status .orders .order3:hover {
+    background-color: orange;
+    color: white;
+    transform: translateY(-5px);
+}
+/*CSS for account page ends here*/

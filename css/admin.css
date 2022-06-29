@@ -1,0 +1,271 @@
+/*  Author: Michael Mutisya;
+    Theme: Electro Store Admin Control Panel;
+    Version: 1.0;
+*/
+
+/*CSS for all starts here*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper {
+    width: 90%;
+    margin: auto;
+}
+.text-center {
+    text-align: center;
+}
+/*logo CSS*/
+.logo {
+    font-size: large;
+    font-weight: bold;
+    width: 30vw;
+}
+.logo span {
+    color: #4949e0;
+}
+.logo h4{
+    color: orange;
+}
+.tbl-100 {
+    width: 100%;
+}
+.tbl-40 {
+    width: 40%;
+}
+.btn {
+    padding: 7px;
+    color: white;
+    cursor: pointer;
+}
+.primary {
+    background-color: #6060e2;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+.primary:hover {
+    background-color: #1010f8;
+}
+.secondary {
+    background-color: #6fb16f;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+.secondary:hover {
+    background-color: #1ba11b;
+}
+.danger {
+    background-color: #f34646;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+.danger:hover {
+    background-color: #f50e0e;
+}
+.manage-tbl, .manage-tbl-o {
+    width: 100%;
+    margin: 25px auto;
+}
+.manage-tbl table, .manage-tbl-o table {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.manage-tbl table th, .manage-tbl-o table th {
+    border-bottom: 2px solid gray;
+}
+.manage-tbl table tr td {
+    padding: 12px;
+}
+.manage-tbl-o table tr td {
+    padding: 1px;
+}
+.update-orders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+}
+.update-orders .update-card {
+    margin: 20px;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-title {
+    margin-top: 30px;
+}
+.form-content {
+    padding: 60px 50px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.form-content td {
+    padding: 10px 0;
+}
+.form-content input {
+    outline: none;
+    padding: 5px;
+}
+.form-content input:focus {
+    outline: #4949e0;
+}
+.form-content textarea {
+    padding: 5px;
+    outline: none;
+}
+.status-pending {
+    color: purple;
+    background-color: #9e609e;
+    border: 1px solid purple;
+    border-radius: 40px;
+}
+.status-cancelled {
+    color: red;
+    background-color: #e9a3a3;
+    border: 1px solid red;
+    border-radius: 40px;
+}
+.status-onway {
+    color: #0b0be4;
+    background-color: #8080f0;
+    border: 1px solid #0b0be4;
+    border-radius: 40px;
+}
+.status-delivered {
+    color: green;
+    background-color: #88e688;
+    border: 1px solid green;
+    border-radius: 40px;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+/*CSS for all ends here*/
+
+/*CSS for menu-section starts here*/
+.admin {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2vh;
+    padding-top: 30px;
+}
+.admin img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -5px;
+}
+.admin a {
+    position: relative;
+    text-decoration: none;
+    color: #4949e0;
+    margin-right: 15px;
+}
+.admin a:first-child {
+    margin-right: 50px;
+}
+.admin a:hover {
+    color: orange;
+}
+.menu-section {
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+}
+.menu-section .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+.menu-section .menu-container .menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu-section .menu-container .menu ul li {
+    padding: 5px;
+}
+.menu-section .menu-container .menu ul li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #4949e0;
+}
+.menu-section .menu-container .menu ul li a:hover {
+    background-color: #4949e0;
+    border-radius: 5px;
+    color: orange;
+}
+/*CSS for menu-section ends here*/
+
+/*CSS for main-section starts here*/
+.main-section {
+    display: flex;
+    align-items: center;
+}
+.main-section .dashboard-head {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.main-section .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 59.5vh;
+}
+.main-section .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px;
+    width: 250px;
+    height: 180px;
+    box-shadow: 0 0 12px 0 rgb(158, 135, 135);
+    border-radius: 12px;
+    background-color: orange;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+.main-section .container .card:nth-child(2) {
+    transform: scale(1.1);
+}
+.main-section .container .card:nth-child(3) {
+    transform: scale(1.2);
+}
+.main-section .container .card:last-child {
+    transform: scale(1.25);
+}
+.main-section .container .card:hover {
+    box-shadow: 0 0 40px 0 rgb(158, 135, 135);
+    transform: scale(1.2);
+}
+/*CSS for main-section ends here*/
+
+/*CSS for footer-section starts here*/
+.footer-section {
+    display: flex;
+    align-items: center;
+    background-color: #4949e0;
+    height: 10vh;
+}
+.footer-section a {
+    color: white;
+}
+.footer-section a:hover {
+    color: orange;
+}
+/*CSS for footer-section ends here*/
