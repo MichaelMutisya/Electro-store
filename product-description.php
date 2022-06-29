@@ -62,7 +62,7 @@
                 <h3>Similar Products</h3>
                 <?php
                     //SQL query to select similar products 
-                    $sql
+                    $sql = "SELECT * FROM `tbl_products` WHERE `cat`";
                 ?>
             </div>
         </section>
