@@ -1,8 +1,8 @@
 <?php
-    function productCard($image_name, $product_name, $short_description, $old_price, $new_price){
+    function productCard($image_name, $product_name, $short_description, $old_price, $new_price, $product_id){
         $element= "
         <div class=\"product-card\">
-            <a href=\"product-description.php\" type=\"submit\">
+            <a href=\"product-description.php?product_id='$product_id'\" type=\"submit\">
                 <form action=\"\" method=\"POST\">
                     <div class=\"product-card-img\">
                             <img src=\"images/products/$image_name\" alt=\"product image\" class=\"img-responsive\" style=\"height: 21vh;\">
@@ -24,7 +24,7 @@
                         <small><s>Ksh. $old_price</s></small>
                         <h4>Ksh. $new_price</h4>
                     </div>
-                    <button type=\"submit\" class=\"add\" name=\"addToCart\">Add to Cart <i class=\"fa fa-shopping-cart\"></i></button>
+                    <button type=\"submit\" class=\"add img-responsive\" name=\"addToCart\">Add to Cart <i class=\"fa fa-shopping-cart\"></i></button>
                 </form>
             </a>
         </div>

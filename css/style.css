@@ -348,6 +348,7 @@ a {
     transform: scale(0.95);
 }
 .product-card button {
+    margin-top: 12px;
     border: none;
     outline: none;
     background-color: orange;
@@ -413,15 +414,35 @@ a {
 .special-offer-description .top img {
     float: right;
 }
+.gallery-description {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
 .product-description {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 .product-image-description {
-    width: 500px;
     border: 1px solid orange;
     border-radius: 12px;
+}
+.change-image {
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 12px;
+    width: 100%;
+}
+.change-image div {
+    width: 90px;
+    border: 1px solid orange;
+}
+.product-image-description {
+    width: 100%;
+}
+.product-image-description img{   
+    height: 300px;
 }
 .short-description {
     display: flex;
@@ -434,11 +455,17 @@ a {
     margin-top: 50px;
 }
 .long-description {
+    margin: auto;
+    width: 1000px;
     margin-top: 12px;
     line-height: 2;
     padding: 12px;
 }
-
+.similiar-products {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
 /*CSS for main-section ends here*/
 
 /*CSS for footer-section starts here*/

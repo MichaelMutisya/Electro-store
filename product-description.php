@@ -2,7 +2,9 @@
     //include constants file to use constant variables like SITEURL
     include('config/constants.php');
     //inlude product card file to use it on similar products section
-    include('partials/product-card.php')
+    include('partials/product-card.php');
+    //inlude product description card file to display product description
+    include('partials/product-description-card.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,29 +46,83 @@
             <div class="title text-center">
                 <h3>Product description</h3>
             </div>
-            <div class="product-description">
-                <div class="product-image-description">
-                    <img src="images/products/Kitchen Appliances320.jpg" class="img-responsive">
-                </div>
-                <div class="short-description">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas fugit labore! Eos hic, veritatis illo ab aliquid tempora aperiam nostrum quod fuga, eaque, dolor excepturi pariatur reprehenderit perspiciatis minima.</p>
-                    <form action="index.php">
-                        <button type="submit" class="primary" name="add">Add to Cart <i class="fa fa-shopping-cart"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="long-description">
-                <h4>More description</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sunt commodi sapiente cum laudantium perspiciatis quam magni eveniet minima consectetur dolores nam soluta fugiat reiciendis veritatis nisi, suscipit odio! Tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint, minima perspiciatis nulla a possimus nemo fuga at corrupti unde minus, maiores expedita qui eaque quia. Sunt at consequuntur iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus saepe corrupti tempore nulla, nihil quaerat, asperiores aliquid ipsam dolorem obcaecati inventore placeat eum alias libero consequatur illo cupiditate earum modi!</p>
-            </div>
+            <?php
+                //check if product id is set
+                if(isset($_GET['product_id'])){
+                    //set the product id variable
+                    $product_id = $_GET['product_id'];
+
+                    //SQL query to select product record from the database
+                    $sql = "SELECT * FROM `tbl_products` WHERE `product_id`=$product_id";
+
+                    //execute the query
+                    $res = mysqli_query($conn, $sql);
+
+                    //check if query executed
+                    if($res == true){
+                        
+                        //display product description
+                        while($rows = mysqli_fetch_assoc($res)){
+                            //set the product data collected from the database to variables
+                            $product_id = $rows['product_id'];
+                            $product_name = $rows['product_name'];
+                            $category_name = $rows['category_name'];
+                            $image_name = $rows['image_name'];
+                            $short_description = $rows['short_description'];
+                            $long_description = $rows['long_description'];
+                            $old_price = $rows['original_price'];
+                            $new_price = $rows['price'];
+
+                            //print the variables
+                            productDescriptionCard($image_name, $product_name, $short_description, $long_description, $old_price, $new_price);
+                        }
+                    }
+                    else{
+                        echo "didn't execute";
+                        die();
+                        //display error message
+                        echo "<div class='error text-center'>Something wrong happened!</div>";
+                    }
+                }
+                else{
+                    //redirect to homepage
+                    echo "<script>window.location='index.php'</script>";
+                }
+            ?>
         </section>
         <section class="section-main">
             <div class="title text-center">
                 <h3>Similar Products</h3>
+            </div>
+            <div class="similiar-products wrapper">
                 <?php
                     //SQL query to select similar products 
-                    //$sql = "SELECT * FROM `tbl_products` WHERE `category_name`='$category_name' OR ";
-                    productCard($image_name, $product_name, $short_description, $old_price, $new_price);
+                    $sql = "SELECT * FROM `tbl_products` WHERE `category_name`='$category_name' AND `product_id`!='$product_id'";
+
+                    //execute the query
+                    $res = mysqli_query($conn, $sql);
+
+                    //check if the query executed
+                    if($res == true){
+                        //display similar products
+                        while($rows = mysqli_fetch_assoc($res)){
+                            //set data collected from the database to variables
+                            $product_id = $rows['product_id'];
+                            $product_name = $rows['product_name'];
+                            $category_name = $rows['category_name'];
+                            $image_name = $rows['image_name'];
+                            $short_description = $rows['short_description'];
+                            $long_description = $rows['long_description'];
+                            $old_price = $rows['original_price'];
+                            $new_price = $rows['price'];
+
+                            productCard($image_name, $product_name, $short_description, $old_price, $new_price, $product_id);
+                        }
+                    }
+                    else{
+                        //display error message
+                        echo "<div class='error text-center'>Something wrong happened!</div>";
+                    }
                 ?>
             </div>
         </section>

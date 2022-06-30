@@ -81,13 +81,14 @@
                     if($count > 1){
                         //there is data loop and print data on the page
                         while($rows2 = mysqli_fetch_assoc($res2)){
+                            $product_id = $rows2['product_id'];
                             $product_name = $rows2['product_name'];
                             $image_name = $rows2['image_name'];
                             $short_description = $rows2['short_description'];
                             $old_price = $rows2['original_price'];
                             $new_price = $rows2['price'];
                             
-                            productCard($image_name, $product_name, $short_description, $old_price, $new_price);
+                            productCard($image_name, $product_name, $short_description, $old_price, $new_price, $product_id);
                         }
                     }
                     else{

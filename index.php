@@ -96,13 +96,14 @@
                     if($count > 1){
                         //there is data loop and print data on the page
                         while($rows = mysqli_fetch_assoc($res)){
+                            $product_id = $rows['product_id'];
                             $product_name = $rows['product_name'];
                             $image_name = $rows['image_name'];
                             $short_description = $rows['short_description'];
                             $old_price = $rows['original_price'];
                             $new_price = $rows['price'];
                             
-                            productCard($image_name, $product_name, $short_description, $old_price, $new_price);
+                            productCard($image_name, $product_name, $short_description, $old_price, $new_price, $product_id);
                         }
                     }
                     else{
@@ -132,13 +133,14 @@
                     if($count > 1){
                         //there is data loop and print data on the page
                         while($rows = mysqli_fetch_assoc($res)){
+                            $product_id = $rows['product_id'];
                             $product_name = $rows['product_name'];
                             $image_name = $rows['image_name'];
                             $short_description = $rows['short_description'];
                             $old_price = $rows['original_price'];
                             $new_price = $rows['price'];
                             
-                            productCard($image_name, $product_name, $short_description, $old_price, $new_price);
+                            productCard($image_name, $product_name, $short_description, $old_price, $new_price, $product_id);
                         }
                     }
                     else{
