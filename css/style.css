@@ -10,7 +10,7 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-/*logo CSS*/
+/*logo CSS start here*/
 .logo {
     font-size: large;
     font-weight: bold;
@@ -22,6 +22,7 @@
 .logo h4{
     color: orange;
 }
+/*logo CSS ends here*/
 .wrapper {
     margin: auto;
     width: 90%;
@@ -412,6 +413,32 @@ a {
 .special-offer-description .top img {
     float: right;
 }
+.product-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.product-image-description {
+    width: 500px;
+    border: 1px solid orange;
+    border-radius: 12px;
+}
+.short-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    line-height: 1.5;
+}
+.short-description form {
+    margin-top: 50px;
+}
+.long-description {
+    margin-top: 12px;
+    line-height: 2;
+    padding: 12px;
+}
+
 /*CSS for main-section ends here*/
 
 /*CSS for footer-section starts here*/
