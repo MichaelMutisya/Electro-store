@@ -1,6 +1,8 @@
 <?php
     //include constants file to use constant variables like SITEURL
     include('config/constants.php');
+    //inlude product card file to use it on similar products section
+    include('partials/product-card.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,20 +43,21 @@
         <section class="section-main">
             <div class="title text-center">
                 <h3>Product description</h3>
-                <div>
-                    <div>
-                        <img src="" class="">
-                    </div>
-                    <div>
-                        <p></p>
-                        <form action="index.php">
-                            <button type="submit" class="add" name="addToCart">Add to Cart <i class="fa fa-shopping-cart"></i></button>
-                        </form>
-                    </div>
+            </div>
+            <div class="product-description">
+                <div class="product-image-description">
+                    <img src="images/products/Kitchen Appliances320.jpg" class="img-responsive">
                 </div>
-                <div>
-                    <h4>More description</h4>
+                <div class="short-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas fugit labore! Eos hic, veritatis illo ab aliquid tempora aperiam nostrum quod fuga, eaque, dolor excepturi pariatur reprehenderit perspiciatis minima.</p>
+                    <form action="index.php">
+                        <button type="submit" class="primary" name="add">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                    </form>
                 </div>
+            </div>
+            <div class="long-description">
+                <h4>More description</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sunt commodi sapiente cum laudantium perspiciatis quam magni eveniet minima consectetur dolores nam soluta fugiat reiciendis veritatis nisi, suscipit odio! Tenetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sint, minima perspiciatis nulla a possimus nemo fuga at corrupti unde minus, maiores expedita qui eaque quia. Sunt at consequuntur iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus saepe corrupti tempore nulla, nihil quaerat, asperiores aliquid ipsam dolorem obcaecati inventore placeat eum alias libero consequatur illo cupiditate earum modi!</p>
             </div>
         </section>
         <section class="section-main">
@@ -62,7 +65,8 @@
                 <h3>Similar Products</h3>
                 <?php
                     //SQL query to select similar products 
-                    $sql = "SELECT * FROM `tbl_products` WHERE `category_name`='$category_name' OR ";
+                    //$sql = "SELECT * FROM `tbl_products` WHERE `category_name`='$category_name' OR ";
+                    productCard($image_name, $product_name, $short_description, $old_price, $new_price);
                 ?>
             </div>
         </section>
