@@ -15,7 +15,7 @@
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="<?php echo SITEURL;?>admin/index.php">Home</a>
+                            <a href="<?php echo SITEURL;?>admin/index.php" class="active">Home</a>
                         </li>
                         <li>
                             <a href="<?php echo SITEURL;?>admin/manage-admins.php">Admin</a>

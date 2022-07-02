@@ -203,9 +203,14 @@
     color: #4949e0;
 }
 .menu-section .menu-container .menu ul li a:hover {
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+}
+.menu-section .menu-container .menu ul li a.active {
     background-color: #4949e0;
     border-radius: 5px;
-    color: orange;
+    color: white;
 }
 /*CSS for menu-section ends here*/
 
