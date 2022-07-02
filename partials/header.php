@@ -38,7 +38,7 @@
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="<?php echo SITEURL;?>index.php">Home</a>
+                            <a href="<?php echo SITEURL;?>index.php" class="active">Home</a>
                         </li>
                         <li>
                             <a href="<?php echo SITEURL;?>categories.php">Categories</a>

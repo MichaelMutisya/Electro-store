@@ -33,6 +33,8 @@
     <!-- CASCADING STYLE SHEET -->
     <link rel="stylesheet" href="css/style.css">
     
+    <!-- JS SCRIPTS -->
+    <script defer src="js/electrostoreapp.js"></script>
 </head>
 <body>
     <!--menu-section starts here-->

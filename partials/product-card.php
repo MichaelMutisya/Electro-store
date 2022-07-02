@@ -26,6 +26,7 @@
                     </div>
                     <button type=\"submit\" class=\"add img-responsive\" name=\"addToCart\">Add to Cart <i class=\"fa fa-shopping-cart\"></i></button>
                 </form>
+                
             </a>
         </div>
         ";

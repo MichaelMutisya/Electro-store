@@ -93,9 +93,6 @@
 a {
     text-decoration: none;
 }
-.active {
-    display: none;
-}
 .cart-label {
     width: 23px;
     height: 20px;
@@ -271,6 +268,10 @@ a {
 }
 .menu-container ul li a:last-child:hover {
     transform: translateY(-5px);
+}
+.menu-container ul li a.active {
+    background-color: orange;
+    color: white;
 }
 .menu .fa-shopping-cart, .fa-store {
     color: orange;
