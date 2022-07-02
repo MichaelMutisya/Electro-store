@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../css/admin.css">
 
     <!-- JS SCRIPTS -->
-    <script defer src="js/adminapp.js"></script>
+    <script defer src="../js/adminapp.js"></script>
 </head>
 <body>
     <!--menu-section starts here section-->
