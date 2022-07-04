@@ -56,10 +56,33 @@
             <div class="cart">
                 <div class="cart-row">
                     <?php
-                        cartProduct();
-                        cartProduct();
-                        cartProduct();
-                        cartProduct();
+                        //set product id
+                        $product_id = array_column($_SESSION['cart'], 'product_id');
+                        
+                        //SQL query to select product data
+                        $sql = "SELECT * FROM `tbl_productS` WHERE `active`='Yes' AND `featured`='Yes'";
+
+                        //execute the query
+                        $res = mysqli_query($conn, $sql);
+
+                        //display products on the cart
+                        while($rows = mysqli_fetch_assoc($res)){
+                            $product_name = $rows['product_name'];
+                            $image_name = $rows['image_name'];
+                            $product_price = $rows['price'];
+                            $active = $rows['active'];
+                            $featured = $rows['featured'];
+                            //check if the product is active
+                            if($active == "Yes" && $featured == "Yes"){
+                                foreach($product_id as $id){
+                                    if($rows['product_id'] == $id){
+                                        cartProduct($image_name, $product_name, $product_price);
+                                    }
+                                }
+                            }else{
+                                unset($rows['product_id']);
+                            }
+                        }                 
                     ?>
                 </div>
                 <div class="checkout">

@@ -48,7 +48,15 @@
                         </li>
                         <li>
                             <a href="<?php echo SITEURL;?>cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-                            <span class="cart-label text-center">0</span>
+                            <?php
+                            if(isset($_SESSION['cart'])){
+                                $count = count($_SESSION['cart']);
+                                echo "<span class='cart-label text-center'>$count</span>";
+                            }
+                            else{
+                                echo "<span class='cart-label text-center'>0</span>";
+                            }
+                            ?>
                         </li>
                     </ul>
                 </nav>

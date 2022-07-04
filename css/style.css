@@ -364,6 +364,9 @@ a {
 .rating {
     color: orange;
 }
+.button-active {
+    display: none;
+}
 /*special offer*/
 .special-offer-container {
     display: flex;
@@ -606,7 +609,7 @@ a {
 .cart .product {
     display: flex;
     padding: 12px;
-    width: 70%;
+    width: 75%;
     align-items: center;
 }
 .cart .product .cart-product-card {
@@ -619,7 +622,7 @@ a {
 }
 .cart .product .cart-product-card .product-img {
     width: 30%;
-    margin-right: 50px;
+    margin-right: 60px;
 }
 /*quantity*/
 .cart .product .quantity {
